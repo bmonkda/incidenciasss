@@ -11,33 +11,42 @@
     <title>{{ config('app.name', 'INCIDENCIAS') }} - @yield('title')</title>
     
     {{-- <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/> --}}
-    <link rel="icon" type="image/x-icon" href={{ url('../layouts/plantilla/assets/img/favicon.ico') }}/>
-    {{-- <link rel="icon" type="image/x-icon" href="{{ asset('../layouts/plantilla/assets/img/favicon.ico') }}"/> --}}
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/favicon.ico') }}"/>
     
     {{-- <link href="assets/css/loader.css" rel="stylesheet" type="text/css" /> --}}
-    <link href="{{ asset('../layouts/plantilla/assets/css/loader.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/loader.css') }}" rel="stylesheet" type="text/css" />
     
     {{-- <script src="assets/js/loader.js"></script> --}}
-    <script src="{{ asset('../layouts/plantilla/assets/js/loader.js') }}"></script>
+    <script src="{{ asset('assets/js/loader.js') }}"></script>
     
+
     
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
+
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
     
     {{-- <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> --}}
-    <link href="{{ asset('../layouts/plantilla/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     
     {{-- <link href="assets/css/plugins.css" rel="stylesheet" type="text/css" /> --}}
-    <link href="{{ asset('../layouts/plantilla/assets/css/plugins.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/plugins.css') }}" rel="stylesheet" type="text/css" />
+
     <!-- END GLOBAL MANDATORY STYLES -->
+
+
 
     
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
-    <link href="plugins/apex/apexcharts.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/dashboard/dash_1.css" rel="stylesheet" type="text/css" />
+    
+    {{-- <link href="plugins/apex/apexcharts.css" rel="stylesheet" type="text/css"> --}}
+    <link href="{{ asset('plugins/apex/apexcharts.css" rel="stylesheet') }}" type="text/css">
+    {{-- <link href="assets/css/dashboard/dash_1.css" rel="stylesheet" type="text/css" /> --}}
+    <link href="{{ asset('assets/css/dashboard/dash_1.css') }}" rel="stylesheet" type="text/css" />
+
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 
 </head>
+
 <body>
     <!-- BEGIN LOADER -->
     <div id="load_screen"> <div class="loader"> <div class="loader-content">
@@ -52,11 +61,11 @@
             <ul class="navbar-item theme-brand flex-row  text-center">
                 <li class="nav-item theme-logo">
                     <a href="index.html">
-                        <img src="{{ asset('../layouts/plantilla/assets/img/90x90.jpg') }}" class="navbar-logo" alt="logo">
+                        <img src="{{ asset('assets/img/90x90.jpg') }}" class="navbar-logo" alt="logo">
                     </a>
                 </li>
                 <li class="nav-item theme-text">
-                    <a href="{{ asset('../layouts/plantilla/index.html') }}" class="nav-link"> CORK </a>
+                    <a href="{{ route('inicio') }}" class="nav-link"> CORK </a>
                 </li>
             </ul>
 
