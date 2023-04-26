@@ -8,4 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Catedoria extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['name', 'slug'];
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
+    // Relación uno a muchos
+    public function subcategorias(){
+        return $this->hasMany(SubCatedoria::class);
+    }
+
 }

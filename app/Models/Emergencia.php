@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Emergencia extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['name'];
+
+    // Relación uno a muchos
+    public function incidencias(){
+        return $this->hasMany(Incidencia::class);
+    }
+
 }
