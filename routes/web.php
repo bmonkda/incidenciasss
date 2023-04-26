@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\User;
+use App\Http\Controllers\IncidenciaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,4 +32,4 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::resource('incidencias', IncidenciaController::class);
+Route::resource('incidencias', IncidenciaController::class)->names('incidencias');
