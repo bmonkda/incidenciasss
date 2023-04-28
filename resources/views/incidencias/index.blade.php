@@ -155,16 +155,16 @@
                         <span class="new-control-indicator"></span>
                         </label>
                     </div>
-                    <h4>Name</h4>
+                    <h4>Título</h4>
                 </div>
                 <div class="user-email">
-                    <h4>Email</h4>
+                    <h4>Categoría</h4>
                 </div>
                 <div class="user-location">
-                    <h4 style="margin-left: 0;">Location</h4>
+                    <h4 style="margin-left: 0;">Prioridad</h4>
                 </div>
                 <div class="user-phone">
-                    <h4 style="margin-left: 3px;">Phone</h4>
+                    <h4 style="margin-left: 3px;">Status</h4>
                 </div>
                 <div class="action-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2  delete-multiple"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
@@ -172,7 +172,7 @@
             </div>
         </div>
 
-        {{-- @foreach ($collection as $item) --}}
+        @foreach ($incidencias as $incidencia)
             <div class="items">
                 <div class="item-content">
                     <div class="user-profile">
@@ -184,8 +184,8 @@
                         </div>
                         <img src="assets/img/90x90.jpg" alt="avatar">
                         <div class="user-meta-info">
-                            <p class="user-name" data-name="Alan Green">Alan Green</p>
-                            <p class="user-work" data-occupation="Web Developer">Web Developer</p>
+                            <p class="user-name" data-name="Alan Green">{{$incidencia->titulo}}</p>
+                            {{-- <p class="user-work" data-occupation="Web Developer">Web Developer</p> --}}
                         </div>
                     </div>
                     <div class="user-email">
@@ -207,7 +207,7 @@
                     </div>
                 </div>
             </div>
-        {{-- @endforeach --}}
+        @endforeach
 
     </div>
 @endsection

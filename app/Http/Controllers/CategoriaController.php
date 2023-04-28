@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Incidencia;
+use App\Models\Categoria;
 use Illuminate\Http\Request;
 
-class IncidenciaController extends Controller
+class CategoriaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,7 @@ class IncidenciaController extends Controller
      */
     public function index()
     {
-        $incidencias = Incidencia::all();
-        // return $incidencias;
-        return view('incidencias.index', compact('incidencias'));
+        //
     }
 
     /**
@@ -43,10 +41,10 @@ class IncidenciaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Incidencia  $incidencia
+     * @param  \App\Models\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function show(Incidencia $incidencia)
+    public function show(Categoria $categoria)
     {
         //
     }
@@ -54,10 +52,10 @@ class IncidenciaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Incidencia  $incidencia
+     * @param  \App\Models\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function edit(Incidencia $incidencia)
+    public function edit(Categoria $categoria)
     {
         //
     }
@@ -66,10 +64,10 @@ class IncidenciaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Incidencia  $incidencia
+     * @param  \App\Models\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Incidencia $incidencia)
+    public function update(Request $request, Categoria $categoria)
     {
         //
     }
@@ -77,10 +75,10 @@ class IncidenciaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Incidencia  $incidencia
+     * @param  \App\Models\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Incidencia $incidencia)
+    public function destroy(Categoria $categoria)
     {
         //
     }

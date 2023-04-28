@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class SubCatedoria extends Model
+class Subcategoria extends Model
 {
     use HasFactory;
 
@@ -23,7 +23,7 @@ class SubCatedoria extends Model
 
     // Relación uno a muchos inversa
     public function categoria(){
-        return $this->belongsTo(Catedoria::class)/* ->where('category_id', '$this->id') */;
+        return $this->belongsTo(Categoria::class)/* ->where('category_id', '$this->id') */;
     }
 
     // public function getCategoryIdAttribute()

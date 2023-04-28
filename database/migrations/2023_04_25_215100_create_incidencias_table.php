@@ -22,14 +22,14 @@ return new class extends Migration
 
             $table->longText('descripcion');
 
-            // $table->foreignId('category_id')->references('id')->on('categories')->onDelete('cascade')->nullable();
-            $table->foreignId('category_id')->references('id')->on('categories')->onDelete('cascade')->nullable();
+            // $table->foreignId('categoria_id')->references('id')->on('categorias')->onDelete('cascade')->nullable();
+            $table->foreignId('categoria_id')->references('id')->on('categorias')->onDelete('cascade')->nullable();
             
-            $table->foreignId('subcategory_id')->references('id')->on('subcategories')->onDelete('cascade');
+            $table->foreignId('subcategoria_id')->references('id')->on('subcategorias')->onDelete('cascade');
             
-            $table->foreignId('emergency_id')->references('id')->on('emergencies')->onDelete('cascade');
+            $table->foreignId('emergencia_id')->references('id')->on('emergencias')->onDelete('cascade');
 
-            $table->foreignId('estatu_id')->default(1)->references('id')->on('estatus')->onDelete('cascade');
+            $table->foreignId('statu_id')->default(1)->references('id')->on('status')->onDelete('cascade');
 
             $table->bigInteger('user_id')->nullable();
 

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Catedoria;
+use App\Models\Subcategoria;
 use Illuminate\Http\Request;
 
-class CatedoriaController extends Controller
+class SubcategoriaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class CatedoriaController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Catedoria  $catedoria
+     * @param  \App\Models\Subcategoria  $subcategoria
      * @return \Illuminate\Http\Response
      */
-    public function show(Catedoria $catedoria)
+    public function show(Subcategoria $subcategoria)
     {
         //
     }
@@ -52,10 +52,10 @@ class CatedoriaController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Catedoria  $catedoria
+     * @param  \App\Models\Subcategoria  $subcategoria
      * @return \Illuminate\Http\Response
      */
-    public function edit(Catedoria $catedoria)
+    public function edit(Subcategoria $subcategoria)
     {
         //
     }
@@ -64,10 +64,10 @@ class CatedoriaController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Catedoria  $catedoria
+     * @param  \App\Models\Subcategoria  $subcategoria
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Catedoria $catedoria)
+    public function update(Request $request, Subcategoria $subcategoria)
     {
         //
     }
@@ -75,10 +75,10 @@ class CatedoriaController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Catedoria  $catedoria
+     * @param  \App\Models\Subcategoria  $subcategoria
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Catedoria $catedoria)
+    public function destroy(Subcategoria $subcategoria)
     {
         //
     }
