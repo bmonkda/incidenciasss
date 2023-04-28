@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\IncidenciaController;
 use App\Models\User;
-use App\Http\Controllers\IncidenciaController;
 use Illuminate\Support\Facades\Route;
 
 /*
