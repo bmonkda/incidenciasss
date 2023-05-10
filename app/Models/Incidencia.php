@@ -38,21 +38,21 @@ class Incidencia extends Model
         // return $this->belongsTo(Usuario::class);
     }
 
-    public function emergency(){
-        return $this->belongsTo(Emergency::class);
+    public function emergencia(){
+        return $this->belongsTo(Emergencia::class);
     }
     
-    public function estatu(){
-        return $this->belongsTo(Estatu::class);
+    public function statu(){
+        return $this->belongsTo(Statu::class);
     }
 
-    public function category()
+    public function categoria()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Categoria::class);
     }
     
-    public function subcategory(){
-        return $this->belongsTo(Subcategory::class);
+    public function subcategoria(){
+        return $this->belongsTo(Subcategoria::class);
     }
     
 

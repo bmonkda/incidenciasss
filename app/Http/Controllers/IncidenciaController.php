@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categoria;
+use App\Models\Emergencia;
 use App\Models\Incidencia;
+use App\Models\Statu;
 use Illuminate\Http\Request;
 
 class IncidenciaController extends Controller
@@ -15,7 +18,12 @@ class IncidenciaController extends Controller
     public function index()
     {
         $incidencias = Incidencia::all();
-        return view('incidencias.index', compact('incidencias'));
+
+        $categorias = Categoria::all();
+        $emergencias = Emergencia::all();
+        $status = Statu::all();
+
+        return view('incidencias.index', compact('incidencias', 'categorias', 'emergencias', 'status'));
     }
 
     /**
@@ -25,7 +33,11 @@ class IncidenciaController extends Controller
      */
     public function create()
     {
-        //
+        $categorias = Categoria::all();
+        $emergencias = Emergencia::all();
+        $status = Statu::all();
+
+        return view('incidencias.index', compact('categorias', 'emergencias', 'status'));
     }
 
     /**
